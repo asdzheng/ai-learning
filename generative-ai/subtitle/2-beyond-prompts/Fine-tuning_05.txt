@@ -1,0 +1,160 @@
+Whereas RAG gives you one way to give additional information
+to a large language model, there's another technique
+called fine-tuning, which is another way to
+give it more information. In particular, if you have
+context that is bigger, that can fit into
+the input length or the context window
+length of the LLM, then fine-tuning
+gives you another way to get LLM to absorb
+this information. Fine-tuning also turns
+out to be useful for getting the LLM output text
+in a certain given style. But this actual implementation
+is a bit harder than RAG. Let's take a look.
+Let's say you have an LLM trained the
+way that we had described previously
+with sentences found on the Internet like
+my favorite food is a bagel with cream cheese. Then it may have learned from hundreds of billions of words, or maybe more than
+a trillion words, to predict the next
+word like this. An LLM like this will
+have learned to generate text that sounds like
+what's on the internet. This process of training
+a large language model on a lot of data is often
+called pre-training. Now, let's say I want to
+modify the LLM to have a relentlessly positive and optimistic attitude
+about everything. There's a technique called fine-tuning that we
+can use to cause the LLM to do a little bit more learning to change
+its outputs to be, in this example, much more
+positive and optimistic. To fine-tune the LLM, we would come up with a set of sentences or a set of texts
+that takes on a positive, optimistic attitude, such as what a wonderful chocolate cake or the novel was thrilling. Given texts like this, you can then create an additional dataset using what a wonderful chocolate cake you would have given what. Next word, it will
+try to predict a, what a next word is, wonderful, what a wonderful
+chocolate, and so on. It turns out that if
+you take an LLM that has been pre-trained on hundreds
+of billions of words, and fine-tune it on just
+an additional, say, 10,000 words or more, could be 100,000
+words if you have more data or even
+1 million words if you have even more data. Fine-tuning to this relatively modest-sized
+dataset can shift the output of your LLM to take on this positive,
+optimistic attitude. Now, maybe shifting
+an LLM to have a relentlessly positive attitude isn't that helpful
+an application, but fine-tuning is used in
+many real applications. One class of applications
+that fine-tuning is useful is when the task isn't easy
+to define in a prompt. For example, if you want to use an LLM to summarize
+customer service calls, a generic LLM may look at a
+call like this and summarize it to say the customer
+tells the agent about a problem with a monitor. But if you run a
+customer call center, you might want it to generate specifics about what the
+conversation was about. It was about the MK401-27KX reported broken by
+customer 5402 and so on. If you create a dataset with maybe just hundreds of
+examples of human expert written summaries and have a large language model
+that's learned from hundreds of billions of
+words on the internet, so it's learned a lot of general knowledge
+on the Internet. But if you additionally
+fine-tune it on maybe just hundreds of carefully handwritten
+summaries of the specific style, then that would shift
+the LLM's ability to write summaries in
+the style that you want. The specific style summary is actually not that easy to
+define in a text prompt. Maybe you could do it, but fine-tuning would just
+be a very precise way to tell the LLM what
+summaries you want. Another example of when a task isn't easy to define
+in the prompt is if you want to mimic a specific writing
+or speaking style. So Tommy Nelson, who's been working with
+me on this course, actually tried just for fun, to get an LLM to sound like me, but it turns out that
+the way most individuals sound is not that easy
+to describe in a prompt. How would you give someone clear instructions
+to sound like me? So if you were to prompt a general-purpose LLM and
+ask it to sound like me, you'd get texts like this, which I don't think it
+sounds that much like me. But if you were to take a lot of transcripts of the
+way I actually talk and have an LLM be fine-tuned to train it to really sound exactly like me by
+learning on my actual words, then asking it to
+write something that sounds like me results
+in texts like this, which I don't know, that sounds more like
+how I would talk. But because mimicking a specific writing
+or speaking style is very difficult
+to do via prompting because it's just
+difficult to describe a specific person's style by
+writing text instructions, fine-tuning turns out to be a more effective way to get an LLM to speak in
+a certain style. If you're building an
+artificial character, maybe a cartoon character, fine-tuning could
+also be a way to get an LLM to speak in
+a certain style. Other than ties that easy
+to defining the prompt, a second broad class
+of applications of fine-tuning is to help the LLM
+gain a domain of knowledge. For example, if
+you want an LLM to be able to read and
+process medical notes, this is what a medical note written about a patient by
+a doctor might look like. This is really not
+normal English. Pt is patient, c/o, complaining of, SOB, shortness of breath, DOE, dyspnea on exertion, PE, this is the results
+of the physical examination and so on. Treatment is the follow up with the primary care physician, STAT chest x-ray, containing treatment
+as needed on oxygen. But this is really not
+normal English and if you were to take an LLM trained
+on normal English, it wouldn't be very good at
+processing text like this. If you were to fine-tune an LLM on a collection of
+medical records, then the LLM could get
+much better at absorbing this body of knowledge about what medical notes sound like. You could then use that to build other applications on
+top of it to better understand medical records
+or legal documents. Here's a piece of legalese written by
+lawyers for lawyers, that's really difficult
+for non lawyers to read. Licensor grants to licensee
+per Section 2(a)(iii), a non-exclusive right and
+so on and so on within 15 days hereof. I
+don't know about you. I did not use the word hereof in my ordinary day to day speech. But this is what legal
+documents sound like. If you want your LLM to
+gain a body of knowledge about how to read and
+understand legal documents, then taking LLM and
+fine-tuning it to legal documents would help it to gain that body of knowledge. Similarly, financial
+documents too. fine-tuning an LLM
+on a large set of financial documents would
+help it to better gain that body of knowledge
+about finance and make it better at applications involving processing documents
+that look like this. Finally, another reason to
+fine tune an LLM is to get a smaller model to perform a task that may previously
+have required a larger model. We'll discuss later this week some of the pros and cons of choosing a larger
+versus a smaller model. But for some LLM
+applications that need a lot of knowledge or
+need complex reasoning, you might use a
+relatively large model, say with over a 100
+billion parameters. But if we were to use
+a model like that, such a model may have
+relatively high latency. Meaning, after you're prompted, you might need to wait a
+while to get back a response. If you were deploying this
+on your own computers, it could be quite costly. Even though we said
+in the earlier video that these models
+aren't that expensive, maybe you want it
+to be even cheaper. That's because a 100 billion
+parameter model may take specialized computers such as a GPU server or other really
+fast computers to run. You probably have a
+hard time running such a large model on
+a normal laptop or PC, and certainly, not on
+a smartphone today. But if you can get your application to work
+on a much smaller model, say one billion parameters, then that's the range of model
+size that they would run much more easily on a laptop or a PC or
+on a mobile phone. For example, if
+what you want is to classify restaurant reviews as positive or negative sentiment, this is a simple enough task
+that you probably don't need a 100 or 200 billion
+parameter model to run. But maybe a one
+billion parameter model would be just fine, maybe even smaller, frankly. But these smaller
+models aren't as smart or they aren't as good as
+a really large models. Which is why if you were to take a small model and then fine-tune it on the dataset like
+the one shown here, not just three examples, but maybe a few hundred or maybe a 1,000 examples if
+you have that much data, then you can get a small model, say one billion parameters to do really well on a task like this. To summarize,
+fine-tuning gives you another technique in addition to RAG to help improve the
+capabilities of an LLM. You might use it for tasks that are hard to
+specify in a prompt. Such as if you wanted
+to output texts in a certain style or if
+you want the LLM to gain a body of
+knowledge such as about medical notes or if
+you want to get a smaller and cheaper
+to run LLM to do a task that might otherwise
+have required a larger LLM. It turns out that RAG
+and fine-tuning are both relatively
+cheap to implement. RAG just is modifications of your prompt and fine-tuning, you might be able to get
+started with tens of dollars or maybe even hundreds
+of dollars depending on how much data you
+want to fine-tune on. There's another
+technique, pre-training your own model that turns out
+to be very expensive today, almost no one other than
+reasonably large companies, usually tech companies
+are attempting this. But for completeness,
+let's take a look at the next video and what
+pre-training involves.

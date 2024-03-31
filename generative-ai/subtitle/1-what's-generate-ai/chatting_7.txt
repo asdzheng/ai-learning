@@ -1,0 +1,118 @@
+In the last two videos, we looked at writing and
+reading applications. In this video, we'll look
+at chatting applications. In addition to the general purpose chat bots
+like ChatGPT, Bard, and Bing chat. Many companies are
+looking at whether they can build specialized
+chat applications. If you're involved
+in a company where you have many people interacting with customers or having certain types of conversations
+of similar nature, this may be a case where you
+can consider whether or not a specialized Chatbot can help with those types
+of conversations. Let's take a look. Earlier
+we already saw the example of a customer service
+Chatbot that might better take orders
+for cheeseburger. Another example of a
+specialized Chatbot would be one that specializes in
+helping you to plan trips. How can vacation
+in Paris inexpensively? A bot could be built to have specialized knowledge
+about travel. Today, there are
+companies exploring a wide range of advice bots. For example, can a bot give you career coaching advice or give
+advice on cooking a meal? A large variety of specialized
+bots that are really good at answering questions
+about one thing are being developed by
+different companies today. Some of these bots
+are capable of just having a conversation
+and giving advice. Some of these bots can also
+interface with the rest of a company's software system
+and take actions such as to put in an order for a
+cheeseburger to be delivered. Another example of
+a bot that might be able to take action would be
+a customer service chat bot. Where it turns out that many IT departments get tons
+of postware reset requests. If a bot can take care of that, then it may take some of the workload off
+your IT department. A bot like this that
+needs to be send a text message to verify identity and actually
+help reset the postware. This is a bot that would
+need to be empowered, to actually take
+action in the world such as to get a text message
+to be sent to someone. Next week we'll discuss more how Chatbots like these are builds that don't
+just generate text. But we can actually take action. Because of the number of customer service organizations exploring the use of Chatbot, I want to share with you a
+range of the spectrum of common design points being
+used by different businesses. For this slide, I
+want to focus on text based chat rather than
+voice or phone based chat. At one end of the
+spectrum would be a customer service
+center with only humans. You would have human
+service agents typing back and
+forth messages like, welcome to Better Burgers and let me play
+the order for you. At the opposite end of the
+spectrum would be Chatbots only where you just have software responding
+directly to customers. But between these two
+ends of the spectrum of humans typing of the
+keyboard or Chatbots only, there are a couple
+common design points. One common design
+points would be to have bots support humans. In which a bot will generate a suggested message
+for a human but the human service
+agent will reopen the message and either
+approve it if it looks good. Or have a chance to
+edit the message before it is actually sent
+back to the customer. This type of design is often also called
+human in the loop. Because as a human, there's lot in and it's
+part of the process before the message actually gets
+sent back to your customer. This is a way to
+mitigate the risk of the Chatbot maybe
+saying the wrong thing. Because a human can
+check over it before it's actually sent
+back to your customer. In the next video, when we talk about what
+LLMs can and cannot do. We'll go over some of the mistakes that LLMs
+can sometimes make. This design helps protect
+against those mistakes of LLMs. A little bit further on
+the automation spectrum would be if you have a bot to
+treach messages for humans. Maybe the bot answer
+the easy messages but escalate to a human for the things that isn't
+quite ready to handle yet. Sometime back, I actually let the team that build
+a bot that would automatically detect
+if the customer was asking for a refund request. It turns out that
+was about 10% of our total chat call volume. By just detecting that
+and automatically giving the customer instructions
+just routed 10% or so of the traffic away from the human agents and so to save the agents a lot of time and let the humans focus on servicing
+the harder requests. But this type of triagging is
+another common design to help your human service agents save time and have to focus
+only on the harder cases. That they're more uniquely
+qualified to handle. In many customer
+service centers, a single human may be simultaneously having
+chat conversations with four or eight, or in some extreme cases, maybe in 16 customers
+at the same time. With bots supporting the humans, it becomes easier for
+a human to manage a larger number of
+parallel conversations. Given that bots sometimes
+say the wrong thing, I want to share with you what building and deploying a bot often feels like in companies that want to do
+this in a safe way. Often, companies will start with an internal facing Chatbot. Many times I would
+build a Chatbot, but let only my own
+team use it to say, answer the questions
+about travel or whatever the bot
+is supposed to do. Assuming your
+internal team will be more sympathetic and more
+understanding of mistakes and be more forgiving if the bot says something
+wrong at one time, this gives you some time to assess the behavior
+of the bot and also avoid public mistakes that could be embarrassing
+for the company. After this looks safe enough, a common next step would be to deploy with
+human in the loop. To let the human check
+over many of the messages. If feasible, before it actually
+goes out to the customer. After doing this for a
+while if it looks like the bots messages are generally safe to
+send to customers, then you might allow the bot to communicate directly
+with customers. Of course, the details of
+every business differs. For some applications, it
+may not be practical to have humans check over every message because of the
+sheer volume of traffic. But depending on the
+risk of the bot saying the wrong thing as well
+as the volume of traffic, and thus whether or not human
+in the loop is feasible, these are some of the
+design patterns I've seen companies use to try
+to deploy bots safely. To summarize, we've
+seen how LLMs can be used for writing,
+reading, and chatting. These three categories
+are not meant to be an exhaustive list
+of what LLMs can do, but they are just a
+few broad categories of what you might
+really use them for. LLMs can do a lot, but they can't do everything. In the next video, let's
+take a look at what LLMs can and cannot do and better
+understand the limitations. Let's go on to the next video.

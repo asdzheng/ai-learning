@@ -1,0 +1,101 @@
+What is Generative AI good for? One of the reasons that
+question is a bit hard to answer is because AI is a
+general-purpose technology. Unlike a lot of technologies
+like a car which is good for transportation or microwave
+oven good for heating food, AI isn't useful
+just for one thing. It's useful for a lot
+of things and that almost makes it
+harder to talk about. But let's take a look at what a general purpose
+technology really means. Similar to electricity, AI
+is useful for many tasks. If we were to ask you,
+what is electricity good for or what is the
+Internet good for? These are other
+general-purpose technologies and it's almost difficult
+to think what is electricity good for
+because it's so pervasive and it's used around us for
+so many different things. In fact, as you saw earlier, supervised learning is useful for many tasks like
+spam filtering, advertising, speech
+recognition, and many others. Generative AI is like this too. In the last video,
+you saw a few of the tasks that an
+LLM can carry out, answering certain questions and hoping with writing for example. Let's discuss more
+broadly a framework for what tasks LLMs can do. First off, Generative
+AI generates texts. Not surprisingly, perhaps
+it's useful for writing. I routinely use
+Generative AI tools as a brainstorming companion. If you're trying
+to name a product, you can ask it to
+brainstorm some names and it comes up with some
+creative suggestions. LLMs can also be good
+at answering questions, and if you give them access to information specific
+to a company, they can help
+members of your team find information that they need. In this case, about
+the availability of parking at the office. In addition to writing, Generative AI is also good for what I'm going
+to call reading task, where you're going to give
+it a relatively long piece of information and have it
+generate a short output. For example, if you run an online shopping
+e-commerce company and you get a lot of
+different customer emails, Generative AI can read the
+customer emails and help you very quickly figure out is this email a complaint or not, which can be used for helping to route complaints to the
+appropriate department to be handled quickly. Given, I love my
+new llama t-shirt, the fabric is so soft,
+that's not a complaint. But if someone emails, I wore my Ilama t-shirt to friend's wedding
+and now they're mad at me for stealing the show. Well, maybe that is a complaint. But Generative AI can help you route emails to the
+right departments. I call this a
+reading task because it's looking at a relatively
+long piece of text, that is a customer email, and then generating a
+relatively short output, just yes or no, is this
+a complaint or not? While supervised learning can also be used for this
+particular task, we'll see later
+that Generative AI is allowing this source
+of reading tasks and other examples that
+we'll see later this week to be built much more quickly
+and inexpensively. Lastly, Generative AI is also used for many chatbot
+types of tasks. Whereas ChatGPT, and Bard, and Bing chat are
+general-purpose chatbots. Generative AI technology and large language models is also enabling many special-purpose
+chat bots to be built. In this example, here's what
+a chatbot might be like for taking online orders
+where a user can say, I like a cheeseburger for
+delivery and the chatbot acknowledges and puts the
+order through for the user. Now in talking
+through these tasks, I find that it's sometimes
+useful to distinguish between two different types of
+LLM-based applications. One is examples like
+this brainstorming one, where it could be quite
+natural for you to type a prompt like this into ChatGPT, or Bard, or Bing chat, or one of the other free or paid large language models on the Internet and
+get a result back. I'm going to call
+an application like this a web interface-based
+application. In contrast, in the example of recognizing if an email
+is a customer complaint, this fits more into a company's
+email routing workflow, and it doesn't really
+make sense for anyone to cut and paste
+customer emails one at a time into a web
+interface to get back answers as to which ones are actually
+complaint emails. This is an example of an LLM that would
+make sense when it's built into a larger
+software automation, that in this case helps with a company's automated
+email routing. I'm going to call this a
+LLM-based software application, the second writing example
+of answering HR questions. It turns out this also will make more sense as a software-based
+LLM application because it'll need
+access to information about your specific company's parking policy for employees, whereas a general large
+language model on the Internet probably doesn't
+have that information. We'll talk more later
+in this course about how this technology
+is built and most of the specialized
+chatbots will also be software-based
+LLM applications. In the rest of this course, I'm going to use these two
+symbols to distinguish between web interface use cases and software-based
+LLM applications. For many people, it may be easier to get
+started with some of the web interface use cases because you can just go to
+a website like ChatGPT, or Bard, or Bing and
+type in a prompt, and get the result back. But I think both the web
+interface-based applications and the software-based
+LLM applications are important and will be very useful for individuals
+and for companies. I found that the framework
+of writing, reading, and chatting as a useful
+way to think about the many different tasks that LLM a large language
+model can do. In the next three videos, we'll dive more deeply into many different
+examples of writing, reading, and chatting tasks. I hope that you'll
+find some of them potentially useful
+for your own work. I look forward to seeing
+you in the next video, we'll talk more about writing, and until then, I look
+forward to enjoy my burger.

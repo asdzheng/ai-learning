@@ -1,0 +1,101 @@
+We've been thinking of LLMs
+as having learned from a lot of texts on the Internet
+to predict the next word. But when you prompt an LLM, it doesn't just predict the
+next word on the Internet, it actually follows
+your instructions. How does it do that? In this optional video, we'll talk about the
+technique called instruction tuning that
+enables LLMs to do that. Then also a technique
+called RLHF, reinforcement learning
+from human feedback, that has been
+instrumental to making LLMs outputs more safe. Let's take a look at what
+these techniques do. We've discussed
+LLMs as having been pre-trained on a lot
+of texts like this, my favorite food is
+bagel with cream cheese. An LLM trained on data like this would be good at repeatedly predicting the next word based on what text on the
+Internet sounds like. If you were to prompt an
+LLM with a question like, what is the capital of France? It is quite possible
+that it will reply, what is the capital of
+Germany? Where is Mumbai? Is Mount Fuji or Mount
+Kilimanjaro taller? Because you do see
+lists of questions on the Internet about
+say, geography. If you see a web page that says what is the
+capital of France, it's actually quite
+plausible that what comes after it is what is the
+capital of Germany? But this isn't the
+answer you want. You wanted to say that the
+capital of France is Paris. In order to get an LLM to follow instructions and not
+just predict the next word, there's a technique called
+instruction tuning, which is basically to take a pre-trained LLM and to
+fine tune it on examples of good answers to questions or good examples of the LLM
+following your instructions. We may give it a question
+response pair like this, what is the capital
+of South Korea? And fine tune it given this input prompt to output the capital of
+South Korea is Seoul. Or help me brainstorm some
+fun museums to visit in Bogota and fine tune it
+to an answer like this. Or an instruction like, write a Haiku poem about
+Japan's cherry blossoms, and fine tune to generate that. To try to make this safer, we can also include
+some examples like, tell me how to break
+into Fort Knox. Fort Knox is a very
+secure facility in the United States that stores a massive amount of the
+US Treasury's gold. Trying to break into Fort Knox
+would be a terrible idea. Please, don't anyone
+try to do that. But I think a good answer for the LLMs to output will
+be something like, I can't assist with that or
+please don't break the law. Given a dataset like this, you can then fine tune a pre-trained LLM on a set of good answers
+to different prompts. Specifically, given
+an example about brainstorming museums in Bogota, we would turn that into a set
+of inputs A and output B, where first the input
+A will be that prompt, and the first word it
+should learn to predict here is sure and the
+second word is sure, here are some
+suggestions, and so on. When you fine tune an LLM
+on a dataset of prompts and good responses that LLM will learn to not just predict the
+next word on the Internet, but to answer your questions and to follow your instructions. This will do okay. But it turns out that
+there's a technique called reinforcement learning from
+human feedback or RLHF, that can improve the
+quality of answers further. Many companies
+training LLMs want the LLM to give results that are helpful,
+honest, and harmless. Sometimes we call
+this the triple H, and the technique RLHF is a way to try to
+accomplish that. The first step of RLHF is to train an answer quality model. In other words, will you supervised learning to learn
+to rate the answers of LLM. For example, given a prompt like advise me on how
+to apply for a job, we might have an LLM generate
+multiple responses such as, I'm happy to help, here
+are some steps to follow, and then have a bunch of
+useful steps after that. Or it might say,
+just try your best, which is not that hopeful
+but not that terrible. Or it might say, it's
+hopeless, why bother? That's clearly not
+a great response. We would then get humans to help rate these responses
+according to how helpful, honest, and harmless
+the LLM's output is so that better answers
+are given higher scores. Where the first
+really helpful answer might get a score of five, the second step's answer might
+get an intermediate score, and the final answer, which is terrible, would
+get a very low score. If we treat the
+responses and scores as the input A and the output B for a supervised
+learning algorithm, then we can train an AI model using supervised
+learning to take as input response from an LLM and score it according to how
+good the response is. The second step of this
+RLHF process is to then have the LLM
+continue to generate a lot of answers to a lot
+of different prompts. We now have this AI model to automatically score
+every single response that the LLM has generated, and this can be used to tune the LLM to generate
+more responses, they get higher scores. The reason this
+technique is called reinforcement learning from
+human feedback is because the scores correspond
+to the reinforcement or the reward that we're giving the LLM for generating
+different answers. By having the LLM learn
+to generate answers that merit higher scores or higher rewards or
+higher reinforcements, the LLM automatically
+learns to generate responses that are more
+helpful, honest, and harmless. So that's how an LLM learns
+to follow instructions. The first step is
+basically fine tuning, where you fine tune it to follow instructions and to
+answer questions, and then second is RLHF, reinforcement learning
+from human feedback to further train it to
+generate better answers. In the last final
+optional video, we'll also take a look at some cutting edge ideas in the technology
+development of LLMs. Thanks for sticking
+with me in this video, and I hope to see you also
+in the next optional video.

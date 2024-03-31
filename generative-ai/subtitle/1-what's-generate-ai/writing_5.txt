@@ -1,0 +1,72 @@
+In the last video,
+we looked at writing, reading and chatting as three major categories of
+tasks that you can get an LLM to do. Given that large language models
+were trained to repeatedly predict the next word, maybe it's no surprise that they're pretty
+good at writing at generating words. And it turns out that many writing tasks
+can be done via a web user interface. So I hope you find this video where
+we'll dive more into writing tasks immediately useful. For writing tasks broadly, what we
+typically do is start with prompts and use a relatively short prompt to write or
+to generate a much longer piece of text. So let's take a look at
+some writing applications. I often use the web interface of large
+language models as a brainstorming partner. If you ask it brainstorm 5 creative names
+for peanut butter cookies, it actually comes up with some pretty creative names
+Nutty Nirvana Nibbles, I would eat that. Or if you ask it to brainstorm ideas for
+increasing cookie sales, then it comes up with a few ideas and you can take a
+look to see if any of these may be useful. You can also use a large language model,
+again, maybe the web interface version,
+to write some copy for you. Let's start with an example. If you were to ask it to write a press
+release announcing the hire of a new COO, a new chief operating officer for your
+company, it may come up with a piece of text like this Company Name Welcomes, New
+COO's Full Name as, so on and so forth. And this is a pretty
+generic press release. When writing a prompt,
+you find that if you can give the large language model more context or
+more background information, then it will write more specific and
+better copy for you. If all that the large language model
+sees is this writer a press release, at this point in time, it doesn't
+know anything about your company, about the new CEO's name or
+their qualifications and so it ends up writing something
+very generic like this. If you end up prompting a large action
+model like this, it's not a problem. You may realize that you wound up
+with a very generic press release and decide to update the prompt
+to give it more information. And so if you were to prompt it and
+say, use the following information for the press release, this is a COO bio,
+this is the name of our company and some details about our company, then
+it will write a much more detailed and insightful press release specific
+to the CEOs joining this company. I find that when prompting an LLM, I'll
+often not get the prompt right the first time, like what we saw just now,
+where we had the prompt press release announcing the new hire of COO
+without giving any context. And that's totally fine. If you see the result isn't what you want,
+just revise the prompt and try again. I'll say more about this
+in a later video this week, when we talk about tips for
+writing effective prompts. Let's look at one more example. Another writing task that I sometimes
+use LLMs for is translation. In fact, some of the large language models
+you can access via Web UI are competitive and sometimes even better than
+the dedicated machine translation engines already, especially for languages
+with a lot of text on the internet. And so where the large language model has
+a lot of data to learn how to generate text in that particular language, it
+tends to do less well in languages, also called low resource languages with less
+text on the Internet in that language. But if you're operating a hotel and you want to translate the welcome message
+into formal Hindi to welcome guests, then a large language model may be
+able to output text like this for you. Unfortunately, I don't speak Hindi,
+I wish I did, but it turns out that this particular translation is only so,
+so the word front desk, it translates into the desk at
+the front rather than the reception, which is what we mean when we
+say the front desk of a hotel. So if you're working with a Hindi speaker,
+and I was when preparing the slide, then they may be able to
+give you some tips to say, this is some sort of not quite
+the best formal Hindi, but you were to tell it to translate
+this into formal spoken Hindi. Then it updates this text to make front
+desk translate into the Hindi word for reception, which is a much
+better translation. Now, here's one fun thing I've
+seen recently in the AI community, which is a lot of us that are working with
+translation often need to translate text into languages that we
+don't speak ourselves. So how can we tell if the large language
+model is doing something reasonable? And in fact, even if you have, say,
+one Hindi speaker on your team, if other members of the team don't speak Hindi,
+how can they figure out what's going on? So what I'm seeing multiple
+teams in the AI community do is translate text into pirate English for
+testing purposes. And so if you were to prompt a large
+language model to translate this into pirate English, you get, ahoy matey, we be hoping you'll relish your
+time aboard the Oceanview Inn. That sounds like pretty
+good pirate English to me. So that hobby grand worthy
+models be used for writing. Let's move on to peepin at Reading House.

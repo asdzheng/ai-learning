@@ -1,0 +1,93 @@
+Welcome back. Last week we discussed how generative
+AI can be used either via a web user interface or be built into a
+software application. This week we'll take a look at how many amazing
+software applications are being built
+using generative AI, and we'll also take a look at some technology
+options that go beyond just prompting and that allow you to do much more
+with generative AI, for example, having it operate on your own
+proprietary documents rather than just
+on what is learned from public sources
+on the Internet. Let's take a look,
+we saw last week a few examples of
+generative AI applications, such as writing answers to
+questions that may require access to information about your company's parking
+policy in this example. Or reading restaurant reviews on the Internet to help with reputation monitoring
+or building a chat bot to help
+take food orders. It turns out that while
+some applications like this did exist and were built before the rise
+of generative AI. Generative AI has made building
+these applications much easier and in many cases has made them work
+much better as well. Let me illustrate
+with the example of reading restaurant reviews
+for reputation monitoring. A few years ago, if you wanted to build a system for
+reading restaurant reviews, it would have taken writing a lot of software code
+that looks like this. Pages and pages of
+software that you would need machine learning
+engineers to write. Specifically the
+process of building a restaurant
+reputation monitoring review system would
+have looked like this. You would use
+supervised learning. That's that technology
+that maps from inputs A to outputs B and if I were
+building the system, I would start by collecting maybe a few hundred or a
+few thousand data points. With examples like this, I would have a review, best soup dumplings
+I've ever eaten. That sounds delicious. Label that as a positive review. The colorful table
+class made me smile. That's positive. Or not
+worth the three month wait, that would be a negative review. The process of
+building the system would involve first
+getting label data, then finding an AI team to help train an AI model on the data, to learn how to
+output positive or negative depending on
+different inputs A. Then finally, you
+might have to find a cloud service like
+AWS or Google Cloud or Azure to deploy
+and run the model so that when you then input best bubble tea I've ever had, that would hopefully recognizes this as having a
+positive sentiment. This process would
+often take months. In contrast, if you were to
+use prompt based development, this is the code you would need to develop a
+sentiment classifier. First, here's how we
+specify a prompt in code. My prompt, which I've set
+equal to two parts of text. There's the instruction text, classify the
+following review as having either a positive or
+negative sentiment. Then here is the review text. After specifying
+the prompt in code, I just need one line of code to call the large
+language model to get a response back
+and then I'm going to have it display or
+print the response. This is pretty much all the code it takes
+to build such a system. In fact, in the next video, I'll share of you an
+optional exercise where you can try out
+this code yourself. Whereas, with the
+traditional approach to building a sentiment classifier, using supervised learning, the timeline for the
+project might have been a month to get, say, 1,000 labeled examples with 1,000 reviews and the
+positive negative labels. After collecting the data, it might have taken a team, say, three months to
+train the AI model on data and then
+another three months to deploy it and make sure it's running well and
+rugged and robust. I don't know if this seems
+like a long time to you, but for many really good machine learning
+teams I've worked with, the 6-12 month timeline was
+pretty realistic for what it took to build and deploy
+a valuable AI model. This worked, and this was very valuable for
+a lot of applications, but this just took a long time. In contrast for prompt base AI, this is what it feels like. You can specify a prompt
+in minutes or maybe hours, and then deploy the model
+in hours or maybe days. There are now many
+applications that had previously taken me and very
+good machine learning teams, maybe 6-12 months to build
+that today I think there are millions of people around
+the world that can now build in maybe days or a week. This is fantastic, because this lowering of the barrier
+to entry to building such applications is leading to a flourishing of a lot
+more AI applications. With one important caveat, which is that, as we
+discussed last week, generative AI tends
+to work much better for unstructured
+data like texts, and images and audio. But with that admittedly
+important caveat, the number of applications
+built on top of generative AI is just letting the community do much more than ever before. In the next optional video, I'd like to invite you to
+try out some codes with me for reading restaurant reviews and
+classifying sentiment. It's fine if you've
+never seen or written a line of code
+before in your life. But I'm hoping to convey
+to you how little code is needed to do this now and
+let you try it out yourself. I hope you take a look
+though also feel free to skip it if you
+wish and after that, we'll come back and talk
+about what building a generative AI software
+project feels like when we talk about
+the life cycle of a generative AI project.

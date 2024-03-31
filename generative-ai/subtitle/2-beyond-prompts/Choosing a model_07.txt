@@ -1,0 +1,106 @@
+When using an LLM to build
+software applications, you find that there are a lot
+of different LLMs out there. Some big ones, some small ones, some open source,
+some closed source. How do you choose from all
+of these different options? In this video, let's take
+a look at some guidelines. One way to estimate how capable an LLM is is to look
+at the model size. Loosely, if we look at
+models that are, say, in the one billion
+parameter range, we'll find that
+they're often good at pattern matching and will have some basic knowledge
+of the world. If what you want is to classify restaurant
+reviews for sentiment, I think a one billion
+parameter model would probably be able to do just fine in terms of that type
+of pattern matching, with basic knowledge about
+food types of words. As you go to a 10
+billion parameter model, you find that the models have
+greater world knowledge. They just know more esoteric
+facts about the world and the models also get better at following basic instructions. So if you want to build
+a food order chatbot, a 10 billion parameter model might be okay especially
+if you were to fine-tune it to become better
+at the types of specific instructions
+you want it to follow. Then the very large models, say 100 billion-plus parameters, will tend to have very
+rich world knowledge. They'll know a lot of
+things about physics and philosophy and history
+and science and so on, and they'll be better as
+well at complex reasoning. This is why if you're building
+a food order chatbot, maybe you don't need the
+chatbot to know so much about history and philosophy and all of these other
+things under the sun. Some of these models
+might be cheap enough to deploy
+that it might be okay to use a huge model even
+for a food order chatbot. But where I would
+definitely tend to use these larger models
+would be tasks that involve deep knowledge
+or complex reasoning. For example, if I'm looking for a brainstorming partner to
+help me think through ideas, I'll often use one of
+the larger models. One of the things
+you've heard me say earlier though is that
+development using LLMs is often a highly empirical, meaning
+experimental process. So it's hard to know in
+advance exactly what the performance of
+a given LLM will be. While I'm sharing some
+general guidelines here, in practice it
+might be worth just trying a few different
+models and testing them. Based on the results you see
+from testing a few options, then pick what actually seems to work best
+for your application. Another decision you might
+have to make is whether to use a closed-source or
+an open-source model. Closed-source models
+are usually accessible via Cloud programming
+interface and I find that many
+of them are pretty easy to build into applications. You just have to write a few
+lines of code like we saw earlier this week to incorporate them into
+software applications. Many of the largest and most
+powerful models today are also available only via Cloud
+programming interfaces and are closed-source
+models and they're also relatively
+inexpensive to run because the large companies hosting these models will often have put a lot of work into serving up these API calls inexpensively. A downside is that if you develop using these
+closed-source models, there is some risk
+of vendor lock-in. Today, the switching costs from one LLM to a different
+one is not very high. But there is some
+cost to retesting all your problems to
+see if they work on a different LLM if you
+do switch vendors. In comparison, there are also many open-source models
+that are available now. One advantage of using an open-source model is you have full control
+over the model. You know you always
+have access to that model and don't have
+to worry about one of the company providing it were to tire or deprecate the model that you
+had built on top of. You can also often run these
+models on your own device. So if you want to run it
+on-premises or on-Prem, that is, on your own service, or on a PC or a laptop
+or a mobile device, then open-source models may give you a good starting
+point to do that. Using an open-source model might also let you
+build an application in a way that retains full control over data
+privacy and data access. For example, I was recently
+working on an application using electronic health records and because of patient privacy, we just could not upload the patient records
+to a Cloud provider. As for that project, my team used an open-source
+model that we ran on our own computers because
+we had to do that to guarantee privacy
+of the patient data. To summarize, this
+week we talked about software applications
+built using LLMs. We saw the life cycle of
+generative AI project, as well as techniques
+like RAG and fine-tuning that can make
+your LLM more capable. Lastly, in this video
+we talked about how to choose an appropriate
+model to build on. There are also a
+couple of optional videos after this one, one that goes a bit deeper
+into the technology that enables LLMs to not just predict the next word
+found on the Internet, but actually follow
+your instructions and do so in a safe way. The other optional video
+talks about some frontier, cutting-edge technology
+that can use LLMs to automatically decide what to do and also use tools
+along the way. Please feel free to check out
+those videos if you wish. Then in the next and final
+week of this course we'll take a look at how LLM technology is affecting businesses
+and society. For example, how can
+you identify LLM use cases that could be
+useful for your company? We'll take a look
+next week as well at a systematic way to understand
+why jobs are more or less affected by
+generative AI and how both the individuals
+doing the jobs as well as businesses employing people
+doing those jobs might navigate the changes that generative AI is
+bringing to work. I look forward to
+seeing you next week.

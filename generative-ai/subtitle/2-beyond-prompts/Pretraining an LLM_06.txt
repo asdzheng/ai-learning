@@ -1,0 +1,33 @@
+Many of the LLMs we've been using
+have been previously trained, or we say pretrained by some company,
+often by a big tech company. When should you pretrain your own model? This turns out to be so
+expensive that when in doubt, I would say probably don't do it. But let's take a deeper look. Many teams have been pretraining
+general-purpose LLMs by learning from text on the internet. These efforts to train very large language
+models may cost tens of millions of dollars, need a large, dedicated
+engineering team, take many months, and a huge amount of data. Many teams have been open
+sourcing such models, and that's been a fantastic
+contribution to the AI community. If you have the resources to pretrain
+models and maybe even open source them, please, by all means make
+that contribution to AI. I think that could be fantastic. But for building a specific application,
+given the time and expense of pretraining a model from scratch, I think of this
+as often an option of last resort. It could help if you have a highly
+specialized domain and a lot of data. For example, Bloomberg is a company
+that offers software as well as media articles centered
+around financial services. Because of its access to a huge
+amount of text on finance, it trained BloombergGPT,
+which is Bloomberg's custom built large language model purpose-built for
+financial applications. And Bloomberg reported that
+compared to general purpose LLMs that had learned
+mainly from internet data, this model does quite a bit better
+on processing financial text. For many practical applications, unless
+you have a huge amount of resources and a huge amount of data, it may be more practical to start with
+an LLM that someone else had pretrained. Say, a general purpose LLM that's
+learned from a lot of internet data and that someone has open source, and
+then to fine tune that to your own data. And that will often give
+pretty decent performance, but in a much more economic way. Now, I am sincerely very grateful to
+the teams that have been putting a lot of resources into pretraining LLMs on
+a lot of text data on the internet and then open sourcing them. And in fact, this gives us many different
+LLMs that we could choose from to use. In the next video, we'll actually take a look at the issue
+of what size LLM do you want to use? And of all the different LLMs out there, how do you think about
+choosing among different ones? Let's go take a look at
+that in the next video.

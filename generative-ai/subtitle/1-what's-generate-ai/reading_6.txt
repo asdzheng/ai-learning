@@ -1,0 +1,136 @@
+In the last video, we
+looked at writing tasks where you would specify a prompt to the last
+large language model, and have it generate a
+comparatively longer output than the input prompt. It turns out, is also useful
+for many reading tasks, and by that I mean tasks where
+you would input a prompt, and then have it
+generate usually a similar length or often shorter output
+than the input prompt. Let's take a look at
+some reading tasks starting with something that
+I use myself all the time, which is proof reading. Many times if I'm
+writing a piece of text, I will read through it
+carefully three or four times myself for spelling
+and grammatical errors, and even though I thought I prove read it carefully myself, a line model will still find errors in it that
+somehow I had miss. Here's an example of a
+prompts that you could try. Proofread the following text, and I find that if you tell it what you want
+the text before. Here's text intended for a website selling
+children's stuffed toys, and sometimes I ask you
+to check for spelling and grammatical errors as well
+as awkward sentences, and then have it rewrite
+it with corrections. This is a piece of
+text with some errors, and the output of the large
+language model fixes, snuggle was misspelled and it fixes this little piece
+of grammar over here. When I'm writing text myself, that I want to be
+quite confident it's free of spelling and
+grammatical errors, and sometimes also
+awkward sentences, I actually use this myself
+to proof read what I write. A second reading task that large language models
+are often used for, is to summarize long articles. One of my collaborators, Erik Brynjolfsson, who's
+a Stanford professor, once sent me an email
+linking to an article that he had written
+titled The Turing Trap. I knew it was a good article, but it was a very long
+article and I didn't have time to read the whole thing before I responded to his email. I actually use the following
+prompt and copy pasted his entire article into an web interface of a
+large language model, and had it quickly
+generate a summary for me. It turns out this paper
+that he had written talks about how human-like
+AI offers benefits, but there's a lot to
+be done by having AI augment humans
+rather than automate. But the point of
+Brynjolfsson's article on the Turing Trap was he was advocating that
+instead of having AI automate or
+replace human work, we should put more
+effort into having AI complement or to
+augment human work. With a large language model summarizing this long article, I was able to get back on this faster than if I had to read
+the entire article myself. By the way, this
+is a good article. Eventually I did read the
+entire article myself, and I really enjoyed
+it, but today, I do sometimes use large
+language models to summarize for me things that I don't have
+time to read in its entirety. This is a use case that
+you could go to one of the web interfaces of
+a large language model and use relatively
+quickly yourself. Now it turns out there's a software application
+version of this too that is taking
+off in businesses. Let me illustrate
+this with an example. Say you're a manager of a customer service call center where you have many
+customer service agents, like this person shown on the
+left with the microphone, having phone calls
+with customers, like this person
+shown on the right. If you have permission to record these phone calls between the
+agents and the customers, you can then run the
+phone calls through a speech recognition
+system to get a text transcript of
+the conversation. If you have many customer service agents having
+conversations, you end up with a lot
+of text transcripts. If you want to review what's going on in
+your call center, you probably end up with
+too much texts to read. Given a text transcript like this between the
+customer and an agent, what really happened
+in this call? One use of large language
+models would be to have it summarize this
+entire conversation and generate a short summary. Like MP401-27KX was reported
+as broken, and so on. If you were to take all of these different
+text transcripts and have a software application to generate the summaries, then you as a manager of
+this can take a quick look at all of these
+summaries and just spot if there are any issues, or any trends that you
+want to be aware of. A system like this
+would be implemented as a software application that
+uses a large language model, because it doesn't
+really make sense for you or anyone else to copy paste these conversations
+one at a time into the website of a large
+language model provider. In terms of customer
+service interactions, large language models are also used for customer
+email analysis. In an earlier video, you saw the example of taking
+a customer email, and deciding if it's a
+complaint, in this case, no, as well as what department
+to route this email. This will be another
+software application that uses a large
+language model. Let's take a deeper look at how one could build
+this application, focusing on the part of deciding what department
+to route this email. One thing you could do is
+write a prompt to tell the LLM to read the email and decide which department to route it to. You can specify the task
+and provide the email. But it turns out that
+with a prompt like this, you may find that the algorithm routes it to the complaints
+department in this case, which may or may not be a department that exists
+in your organization. This would be an example of
+where the LLM has been given insufficient context to
+know what are the names of the actual departments in your company that it
+should choose from. In contrast, if you were to update the prompt as
+follows, and say, read the email, choose the most appropriate
+department to rouse it to, and choose department only
+from the following list. In this case, given the set of choices you
+wanted to choose from, routes it to the apparel
+department correctly. The process of building
+an application using a large language model is
+again, not a lot uncommon. To write a prompt that doesn't quite work right the first time, and when you find it, route it to a nonexistent
+complaint department, then just update the prompt
+and that fixes the problem. One last application
+that I want to touch on is reputation monitoring, where you can use
+an LLM to build a dashboard to track your
+customer sentiments, positive or negative of your business or your
+products over time. For example, if you run a restaurant and
+occasionally your customers, write online reviews or send your emails describing
+their experience, you can then use a
+prompt like this, read the following review and classified as having
+the positive, negative sentiment,
+to have it decide automatically if each review
+was positive or negative. In this case, if the food was amazing or service a friendly, that would be classified as
+having a positive sentiment. Then by having software count the number of
+positive reviews per day, as well as the number of
+negative reviews per day, you can build a dashboard
+that tracks per day, all the time, how the
+sentiments are trending. Looks like the customer
+sentiment is pretty positive, but if ever it starts
+trending negative like this, with more negative reviews, then this dashboard
+can alert you to that maybe something's happening that we should pay attention to, and see if there's something we need to fix at
+the restaurant. In this video, we looked at a number of reading
+applications, including proof
+reading, summarization, email routing, restaurant
+review, sentiment analysis. If you can think of
+toss where you wish you had someone that could
+read a piece of text, and just say a few
+things or give a few quick indications of what was in that piece of text, that could be a
+good candidate for a reading task to get
+an LLM to do for you. Next, let's go onto
+the next video to take a look at chatting task.

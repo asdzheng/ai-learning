@@ -1,0 +1,90 @@
+I'd like to share with you some tips for
+prompting large language models. If you're using the web user
+interface of a LLM provider, hopefully these tips will be
+useful to you right away. And it turns out that similar tips are
+also useful for if you're ever involved in building a software application
+that uses LLMs, let's dive in. In this video, we'll go through
+three main tips for prompting. First is detail and specific. Second is guide the model to
+think through its answer. And third is experiment and Iterate. This starts with be detailed and specific. Using the Fresh College Grad analogy, I would often think about how to make
+sure the om has sufficient context or sufficient background information
+to complete the task. So for example, if you were to ask it help
+me write an email asking to be assigned to the Legal Documents project. Well, given only a prompt like this,
+an om doesn't really know how to write a compelling case to advocate for
+you to be assigned to that project. But if you give additional
+context such as I've applied for a job in the Legal Documents project. We check legal documents I have for experience I'm prompting LLM's to get
+accurate text or professional tone. Then this gives the LLM more relevant
+context to write that email to help you ask to be assigned to the project. Further, if you can also describe
+the desired task in detail. So if you tell it instead of
+saying help me write in the email, if you ask it, write a paragraph of
+text explaining why my background makes me a strong candidate on this project,
+an applicant of the candidacy. Then this type of prompt would not only
+give the LLM's sufficient context, but also tell it quite clearly
+what you wanted to do, and this is more likely to get
+you the result that you want. Second tip is to guide the model
+to think through its answer. So if you were to tell it brainstorm
+5 names for a new cat toy, it actually could do pretty well. But if, say, you have in mind you
+want a rhyming cat toy name with a relevant emoji,
+this is what I might try. I might tell it brainstorm 5 names and
+tell it step 1, come up with five joyful
+words already to cats. Then for each word,
+come with a rhyming name. And finally, for each toy name,
+add a fun relevant emoji. And with a prompt like this you might get
+a result like this where the LLM follows your instructions to first come with purr,
+whisker and so on. And then purr-twiri, whisker-whisper, feline-beeline with fun
+emojis added to the end. So if you already have in mind a process
+by which you think the arm could get to the answer that you want, giving it clear step-by-step instructions
+to follow could be quite effective. Finally, there have been a bunch of
+articles that are seen on social media that say things like 20 prompts
+that everyone must know or 17 prompts that will help
+you grow your career. I don't think there's a perfect prompt for
+everyone. Instead, I find it more useful to
+have a process by which you can write the prompt that will
+generate the result for you. So when I'm prompting an LLM myself,
+I will often experiment and iterate and try something like my
+solid off say, help me rewrite this. And if I don't like the result
+I might clarify and I say correct any grammatical and
+spelling errors in this. And if it still doesn't give
+me exactly result I want, I might clarify even further to say,
+correct any grammatical and spelling errors and rewrite in the tone
+appropriate for a professional resume. So very frequently the process of
+prompting is not about starting off with the right prompt. It's about starting off with something and then seeing if the results
+are satisfactory and knowing how to adjust the prompt to get
+it closer to the answer that you want. I think of the process of prompting as
+like this, you start off with an idea of what you want the LLM to do and
+you just express that in a prompt. And then based on the prompt,
+the LLM will give a response and it may or may not be what you want. If it is, then great, you're done. But if it isn't satisfactory, then that initial response helps you
+shape your idea and modify the prompt and iterate maybe a few times before you
+get to the result that you want. So I think of the prompting
+process as when I start off, I try to be reasonably clear and specific. But to save time, I'll often start off
+with a short prompt that maybe is frankly less specific than it's desired, but
+I just want to get going quickly. After you get a result back,
+if it's not what you want, then think about why the result
+isn't the desired output. And based on that, refine your prompt
+to clarify your instructions and keep on repeating until hopefully you
+get the LLM response that you want. One tip I want to share is I've seen some
+people overthink the initial prompt. I think it's better to usually just try
+something quickly and if it doesn't give you the results you want, it's fine,
+go ahead and improve it over time. You will not break the Internet by just
+accidentally having a slightly incorrectly worded prompt. So go ahead and try what you want. Two important caveats, first, if you are in possession of
+highly confidential information. I would make sure I understand how
+a large language model provider does or does not use or
+keep that information confidential. Before copy pasting highly confidential
+information into the Web user interface of an LLM. And second, as we saw in
+the last video with the lawyer, they got into trouble submitting court
+filings with facts made up by an LLM. Before you counter the LLM's result,
+it may be worth double checking and deciding for yourself whether or not you
+can trust and act on the LLM's output. But with these two caveats when prompting,
+I will often just jump in and try something and see it not work, but
+then use the initial result to decide how to refine the prompt
+to get a better result. And that's why we say prompting
+is a highly iterative process. Sometimes you have to try a few things
+before you get the result you want. So that's it. For tips on prompting, I hope that you
+go to some of the web user interfaces of the large language model providers and
+try out some of these ideas yourself. And in this course, we provide some links
+to some of the popular LLM providers and hope you go play with them and
+have fun with them. That brings us to the end of the main
+set of videos for this week. There's one optional video to follow
+where I'll talk a little bit about image generation or diffusion models. So take a look at that if you want, and then I look forward to
+seeing you back next week where we'll talk more about how to build
+projects using large language models. Look forward to diving into
+that with you next week.

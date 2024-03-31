@@ -1,0 +1,114 @@
+I'd like to share with you
+what the process of building a generative AI
+software application feels like. Let's take a look. Here's what the lifecycle of a generative AI project to build a software
+application feels like. We would start off by
+scoping a project to decide what do we want
+this software to do. For example, say you
+decide you want to build a restaurant reputation
+monitoring system. The next step would be to
+actually try to implement it. And given the ease of building AI applications
+using generative AI, which you may have seen in the optional video that
+came before this one, very often you build a
+prototype quite quickly and then plan to over time improve
+this software prototype. For some applications
+I've worked on, we would build the
+initial prototype in one or two days and
+that initial prototype, frankly, isn't that
+good initially. But building it quickly
+lets us then take it into internal evaluation where we might have our own
+internal team, different restaurant reviews
+and test the system to see how often it is giving
+a correct response. Sometimes the internal
+evaluation will turn out some examples where it doesn't
+give the right result. In this case with, "My pasta was cold," it outputs this as a
+positive sentiment and sometimes cold
+pasta is delicious but this sounds like a
+negative sentiment to me. Based on problems that we
+discovered internally, we'll then go back to continue
+to improve the system. As you saw last week, writing prompts is a
+highly iterative process where you have to try something, see if it works, and
+then improve it. And building a generative
+AI software application also tends to be a very
+iterative process. After a sufficient internal
+evaluation to give you confidence that the
+systems working well enough, then we would deploy it out in the world and continue to
+monitor its performance. And it would not surprise me
+if you deploy something and initially external users also generates input that causes the system to make
+some mistakes. For example, maybe
+a user writes, "My miso ramen tasted like tonkotsu ramen." Is
+this good or bad? Well, if you're not familiar with ramen or Japanese cuisine, you may not know is this a
+good thing or a bad thing. And if your system rates this
+as a positive sentiment, but it turns out that if you're ordering miso
+ramen on the menu, you probably don't want it to
+taste like tonkotsu ramen, which tastes more like
+pork based soup broth. When you find
+incorrect responses like this out in the world, you might decide to go back
+to internal evaluation. For example, to systematically understand if your system is, say, underperforming on
+certain types of cuisine. Or you might decide
+to go back to take these learnings to improve the prompt or improve
+the system further, assuming you decide that these types of errors
+are unacceptable. It turns out that building generative AI software
+is a highly empirical, and by that I mean a highly
+experimental process. Meaning that we're
+repeatedly try something and then
+find and fix mistakes. We've already seen how prompting itself is a highly
+empirical process, where you would have an
+idea, try the prompt, see the element response, then maybe update your idea
+and the prompt and go again. But other than
+updating the prompts, there are other tools that
+we'll talk about this week for improving the performance of
+your generative AI system. One tool that we talk
+about later this week is RAG or retrieval
+augmented generation that gives the large language model access external data sources. We'll also talk later this
+week about a technique called fine tuning that
+allows you to adapt a large language
+model to your task. And then finally,
+pretraining models, which refers to training a large language model from scratch. Don't worry about it. If you don't know what
+any of these terms mean, we'll go through each of them
+in depth later this week. But they're all key
+techniques that, in addition to prompting, gives you different ways
+to improve the performance of your generative AI
+system's performance. Just to walk through
+a second example of the life cycle of your
+generative AI project, let's look at what's building a system to take food
+orders might look like. Say you decide to scope a food order customer service
+chatbot to take orders. What you would do, is start
+by building the system and quickly throw together a
+chatbot to take food orders. Then because we don't know how well this is
+doing internally, you might let your
+internal team try it out and place different
+orders and see how well it does and sometimes
+they'll generate good responses like do you have pickles on the cheeseburger and they'll ask
+if you want some. And sometimes it will give
+an unexpected poor response, such as if you do
+have mushrooms on your burgers but for some
+reason the chatbot says, I'm sorry, we don't
+have mushrooms. Similar to what we saw for the restaurant reputation
+monitoring system, it will be by discovering mistakes like these
+that helps you to improve the system and
+after you're sufficiently confident that this is
+safe to deploy externally, you can then deploy it and let customers place real
+orders and monitor the large language
+models responses to make sure that if it still says anything it
+isn't quite supposed to that you can continue to
+improve its performance. Having built a number of
+generative AI projects, I've often been surprised
+and delighted by the strange and wonderful things that the users will try
+to do with your system. For example, if a user asks, how many calories are
+there in your burger? Initially, the
+system may not know. But if you discover this,
+you can then update the system using perhaps
+a technique called RAG I mentioned just now
+and it will go into depth later this week to allow your software application
+to give a correct answer. So that's what building a generative AI software
+application feels like. And if you work
+at a company with a few or a lot
+software developers, and if you ever come up
+with a cool idea for a generative AI application that your company could build, this hopefully gives
+you a sense of what that process of getting
+it built might be like. Now, one of the worries I
+sometimes hear about is, is it really expensive to use these large language models hosted by companies
+on the Internet? It turns out that the use of these large language models is probably cheaper than
+many people think. In the next video, I'd
+like to share with you some intuitions about how expensive it is or isn't to actually use these
+large language models. Let's go on to the next video.

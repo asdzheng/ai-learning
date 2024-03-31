@@ -1,0 +1,83 @@
+There are quite a
+few web interfaces where you can access a
+Large Language Model. ChatGPT is the best known
+one and Google's Bard, Microsoft Bing and quite a
+few others also work well. Let's take a look
+at how people are using these LLM applications. Whether or not you're already
+using them regularly, I hope that this will
+give you some new ideas for when and how they
+could be useful to you. LLMs are giving a new
+way to find information. For example, if you ask it what's the capital
+of South Africa, it may give a
+response like that. Now as we'll see later, LLM can sometimes make facts up. We call this hallucination.. If you're really relying on getting the right
+answer the question, it may be useful to
+double check the answer with an authoritative source
+before counting on it. But in this case, it does get the capital or three capitals
+of South Africa right. And sometimes a back and forth with an LLM
+is helpful too, for example, if you ask
+what does LLM stand for, it might answer, LLM stands for Legum Magister, which is a term used in law, and it's actually a
+pretty common use of the acronym LLM
+on the Internet. But if you were to then say what about in
+the context of AI? Then hopefully it'll
+say in the context of AI and LLM refers to a
+Large Language Model. Sometimes this
+back and forth can help you give the right context, the LLM to give you the
+information you're looking for. LLM can also sometimes be a thought partner to help
+you think things through. For example, I
+often use an LLM to help me refine my writing. If you were to tell it,
+rewrite this for clarity, since all around the world are realizing learning has
+happened and so on. Leading LLMs are
+actually pretty good at rewriting texts for you. Or here's a fun example, if you were to tell it, to write a three did word story
+involving trucks. Maybe because you have
+a child that likes trucks like I do,
+my son love trucks. But to encourage them
+to brush the teeth, then leading LLMs can actually create pretty fun and
+interesting stories. I don't think this
+is nearly as good as the stories written
+by the great novelist, but for a quick fun thing,
+I think it's not bad. Now, there will be times
+when you're looking for a piece of information and
+you might be wondering, "Should I use web
+search or use an LLM?" So If you're playing a
+sport and unfortunately wound up with a sprained ankle and want to know
+what to do about it, web search can lead you to pretty authoritative
+and I think trustworthy sources
+that can give advice on how to approach
+medical matters. For example, web pages from the Mayo Clinic or
+from Harvard Health. These seem like they would
+be trustworthy sources for what to do about
+the sprained ankle. You could also ask
+an LLM what to do about the sprained ankle and it will generate some answer. But given the propensity of LLM's to make things
+up and sometimes sound very authoritative and confident when making things up, I would probably want to
+double check anything it says about healthcare or medicine before following
+the suggestions. Here's one more example. If you want to make a pineapple pie and they're
+looking for a recipe, it turns out there
+are lots of recipes on the Internet for
+a pineapple pie, and picking one created by a trusted website
+or a trusted chef, that might get you
+pretty good results. Or you can ask an LLM to make one up for you,
+and in that case, it'll come up with something
+that frankly might be okay, but also has a high chance of being a somewhat
+strange recipe. So if you want to
+bake a pineapple pie, I would probably go find a
+web page because there are multiple web pages
+that will give a good solid answer to what's a good
+pineapple pie recipe. But if you were to look for
+something more esoteric, say your friend challenges
+you to make coffee, infuse pineapple pie, there aren't any web
+pages that I could find really on coffee
+infuse pineapple pies. I don't think there is currently a single web page that gives
+a good answer to this. This would be one example where an LLM can help be a
+thought partner to think through how you might go about baking a coffee,
+infuse pineapple pie. These are just some of the
+tasks for which you might find the web user interface
+for LLM useful. We'll explore more examples, discuss strengths and
+weaknesses of LLMs, and go through some best
+practices later this week. But as you can see
+from this video, Generative AI is capable of
+many different things. In the next video, we'll more systematically
+discuss Generative AI as a general purpose technology
+as well as start to come up with a way to organize all of these
+things that they can do, which includes writing,
+reading, and chatting tasks. Let's go take a look at
+that in the next video.

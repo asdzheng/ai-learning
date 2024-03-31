@@ -1,0 +1,144 @@
+Generative AI is an amazing technology,
+but it can't do everything. In this video, we'll take a careful
+look at what LLMs can and cannot do. We'll start off with what I found to be
+a useful mental model for what it can do, and after that, let's look together
+at some specific limitations of LLMs. I found that understanding the limitations
+can lower the chance that you might get tripped up trying to use them for
+something that they're really not good at, so that let's dive in. If you're trying to figure out
+what prompting an LLM can do, here's one question that I found to
+provide a useful mental framework. Which is I'll ask myself,
+can a fresh college grad, following only the instructions in
+the prompts, complete the tasks you want? For example, can a fresh college
+grad follow instructions to read an email to determine if
+an email is a complaint? Well, I think a fresh college
+grad could probably do that, and LLM could do that pretty well too. Or can a fresh college grad read
+a restaurant review to determine if it's a positive or negative sentiment? I think they could do that quite well too,
+and so too, can prompting an LLM. Here's another example, can a fresh
+college grad write a press release without any information about the COO or
+your company? Well, this fresh college grad
+just graduated from college. They only just met you and
+don't know anything about you or your business, and so the best they could
+do is maybe write a really generic and not quite satisfying
+press release like this. But on the flip side, if you were to give
+them more context about your business and about the COO, then we can ask, can this fresh college grad write a press
+release given the basic relevant context? And I think they may be able to do
+that decently well, and so too, can the large language model. When you're picturing an LLM as doing many
+of the things that a fresh college grad might be able to do, think of this fresh
+college grad as having lots of background knowledge that they know, lots of
+general knowledge off the Internet. But they have to complete this task
+without access to a web search engine, and they don't know anything about you or
+your business. For clarity, this mental model
+thought experiment, fresh college grad has to complete a task with no training
+specific to a company or your business. And every time you prompt your LLM, the LLM does not actually remember
+earlier conversations. And so it's as if you're getting
+a different fresh college drag for every single task, so you don't get to
+train them up over time on the specifics of your business or
+the style you want them to write. This rule of thumb of asking what a fresh
+college grad can do is an imperfect rule of thumb, there are things college grads
+can do that LLMs cannot and vice versa. But I found this to be
+a useful starting point for thinking through what LLMs can and
+cannot do. And while we're focused on this slide
+on what prompting an LLM can do, next week when we talk about
+generative AI projects, we'll talk about some slightly more
+powerful techniques that might be able to expand what you can do with generative AI
+beyond this fresh college grad concept. Now, let's take a look at some
+further specific limitations of LLMs. First, is knowledge cutoffs. An LLM''s knowledge of the world is
+frozen at the time of his training. More precisely, a model trained on
+Internet data scraped by January 2022, will have no information
+about more recent events. So given such a model,
+if you were to ask it, what was the highest grossing
+film of the year 2022? It would say it doesn't know. Even though now that we're well past 2022,
+we know that it was the movie Avatar, The Way of Water that was
+the highest grossing film. Around July 2023,
+there were claims of research lab having discovered a room temperature
+superconductor called LK-99. You may have seen this
+picture in some of the news, this claim turned out
+not quite to be right. But if you were to ask an LLM about LK-99, even though it's widely covered in
+the news, if the LLM learned only from text on the Internet as of January 2022,
+it won't know anything about this. So this is called a knowledge cutoff, where the LLM knows things about the world
+only up to a certain moment in time. When it was trained, or when text from
+the Internet was last downloaded for the LLM's training. A second limitation of LLMs is that
+they will sometimes just make things up, and we call these hallucinations. I found that if I ask an LLM to give me
+some quotes from well-known people in histories, it will often
+make up the quotes. For example, if you ask it, give me three quotes that
+Shakespeare wrote about Beyonce. Since Shakespeare lived and
+died well before Beyonce, I don't think Shakespeare
+said anything about Beyonce. But LLM will confidently give you back
+some quotes like her vocals shine like the sun, or all hall the queen,
+she is most worthy of love. So these are hallucinated
+Shakespearean quotes. Or if you ask it to list court
+cases tried in California about AI, it might give authoritative
+sounding answers like this. And in this case,
+it turns out the first case is real, there was a Waymo versus Uber case, but
+I was not able to find an Ingersoll versus Chevron case, and so
+the second case is a hallucination. Sometimes LLMs can hallucinate things or
+make things up in a very confident, authoritative, sounding tone. And this can mislead people into
+thinking that this made-up thing may actually be real. Hallucinations can have
+serious consequences. There was a lawyer that unfortunately,
+used ChatGPT to generate text for a legal case and actually submitted
+to the court, not knowing that he was submitting to the court illegal fouling
+with lots of made-up court cases. And in this New York Times headline, we
+see in this cringe inducing court hearing. The lawyer who relied on AI said she
+did not comprehend that the chat bot could lead him astray, and
+this particular lawyer was sanctioned for submitting a co-filing for made-up things. So understanding of limitations is
+important if you are using this for documents of real consequence. LLMs also have a technical limitation in
+that the input length, that is, the length of the prompt is limited, and so is the
+output length of the text it can generate. Many LLMs can accept a prompt of up
+to only a few thousand words, and so the total amount of context
+you can give it is limited. So if you were asking it
+to summarize a paper, and the paper's length is much longer
+than this input length limitation, the LLM may refuse to process that input. In this case, you may have to give it
+one part of the paper at a time, and ask it to summarize parts
+of the paper at a time. Or sometimes you can also find an LLM
+with a longer input limit length, some will go up to many
+tens of thousands of words. And technically, LLM's have a limitation
+on what's called the context length, and the context length is actually
+a limit on the total input+output size. When I use LLMs,
+I rarely have it generate so much output that I run into limitation
+really on the output length. But I do hit input length limits
+sometimes if I have many, many thousands of words of
+context that I want to give it. Lastly, one major limitation
+of generative AI is that they do not currently work well
+with structured data. And by structured data
+I mean tabular data, like sort of data that you might store in
+an Excel, or Google Sheets, spreadsheet. For example, here is a table of home
+prices with data on both the size of the house in square feet,
+as well as the price of the house. If you were to feed all of these
+numbers into an LLM and then ask it, I have a house that's 1,000 square feet
+what do you think is a good price? LLMs are not really good at that, instead,
+if you call the size the input A, and the price the output B,
+then supervised learning would be a better technique with which to estimate
+the price as a function of the size. Here's another example of structured data
+of tabular data showing when different visitors may be visiting your website, how
+much you offered a product to them, and whether or not they purchased it. Then again, supervised learning would be
+a better technique than trying to copy paste all of this time, and price, and purchase information into the prompt
+of a large language model. In contrast, to structured data, generative AI tends to work
+best with unstructured data. Structured data refers to tabular data of
+the soil you would store in a spreadsheet, whereas unstructured data refers to text,
+images, audio, video. And generative AI does apply to all of
+these types of data, although the impact is the largest and that's why we'll focus
+mostly on text data in this course. Finally, large language
+models can bias output and can sometimes output toxic or
+other harmful speech. For example, large language models
+were trained on text off the Internet. And unfortunately, text on the Internet
+can reflect biases that exist in society. So if you were to ask an LLM complete the
+sentence, surgeon walked to the parking lot and took out,
+the LLM might output his car keys, but you'll say the nurse walked to the parking
+lot and took out, it may say her phone. So in this case, the LLM has assumed
+that the surgeon is male, and the nurse is female, whereas we know that clearly
+surgeons and nurses can be any gender. And so if you're using an LLM
+in an application where such biases could cause harm,
+I would use care in how we prompt and apply the LLM to make sure we don't
+contribute to such undesirable biases. Finally, some LLMs can also occasionally
+output toxic or other harmful speech. For example, some LLMs will sometimes
+teach people how to do undesirable, sometimes even illegal acts. Fortunately, all the major large language
+providers have been working hard on the safety of these models, and so most
+models have gotten much safer over time. And if you use the web interfaces so the
+major LLM providers, it's actually been getting much harder over time to get them
+to output these types of harmful speech. So that summarizes what prompting
+an LLM can and cannot do. And as I mentioned, next week we'll
+take a look at some techniques for overcoming some of these limitations to
+make what LLMs can do even broader and more powerful. But first, let's take a look at
+some tips on prompting LLMs. And I hope that the tips I share in the
+next video will be useful right away to how you use LLMs,
+I'll see you in the next video.

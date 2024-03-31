@@ -1,0 +1,77 @@
+In this video, I'd
+like to walk through with you some quick
+examples to build intuition about how much using large language models in the software application
+actually cost. Let's take a look. These are some example prices for
+prompting and getting responses from different
+large language models that are available
+to developers. That is, if you call these large language
+models in your code. OpenAI/GPT3.5 charges
+0.2 cents per 1,000 tokens. GPT4 costs quite a bit more, six cents per 1,000 tokens
+and Google's PaLM 2 and Amazon's Titan Lite are
+also pretty inexpensive. What I'm showing
+here are the cost of generating different
+numbers of tokens. Technically, these
+large language models charge for the length
+of the prompt as well, but the length of the prompt, sometimes called
+the inputs is almost always cheaper than the
+cost of the outputs so let's just focus on the cost of the output tokens for now. You may be wondering,
+what is a token? It turns out that a token is loosely either a word
+or a subpart of a word. Because that's how large
+language models process text. Common words like v or example would be counted
+as a single token when a large language
+model processes it. Or my name, Andrew, is a relatively common name, and so that's also
+a single token. But a less common word
+like translate might be split by a large
+language model into two sub-parts of words, tran and slate, and so having it generate translate will cost
+you two output tokens. Unlike the more common words, which will cost you
+only one token. Or programming, it turns out, might be split by LLM
+into program and ming, and also costs two tokens. A less frequent word
+like tonkotsu might be split into four
+tokens with ton and k, and ots and u. But average, over large
+collections of text documents, roughly each token is
+about 3/4 of a word. If you were to
+generate 300 words, that would cost you
+about 400 tokens. Don't worry about it if the math doesn't totally make sense. But the intuition
+I hope you take away from this is the number of tokens is loosely equal
+to the number of words, but a little bit bigger. It turns out to be roughly 33% more than the number of words. On the next slide, we'll do
+this calculation assuming a cost of 0.2 cents
+1,000 tokens. But of course, if you were
+to use different LLM options, the cost may be higher or lower. Imagine that you're building an LLM application
+for your own team, maybe to generate text as
+useful for them to read. Let's estimate how much
+it would cost to generate enough texts to keep someone on your team occupied for an hour. Typical adult reading
+speed might be about 250 words per minute. To keep someone
+occupied for an hour, you need to generate
+60*250 words, which is 15,000 words
+that the LLM has output. But we need to prompt the LLM as well to generate this output. If we assume that the
+length of the prompt is comparable to the
+length of the output, that might add
+another 15,000 words. That is, if we need to prompt it in total for 15,000
+words worth of input, and then also generate 15,000 words of output to keep
+someone occupied for an hour. Of course, this is a
+very crude assumption, but perfectly good enough for the purposes of
+building intuition. In total, we need to
+pay for 30,000 words. Ans as we saw on
+the previous slide, because each token corresponds
+to roughly 3/4 of a word, 30,000 words corresponds
+to about 40,000 tokens. If the cost is 0.2 cents
+per 1,000 or 1k tokens then generating 40,000
+tokens costs 40 times that, 0.002*40, which is
+equal to eight cents. If your software
+application uses a Cloud-hosted LLM
+service by OpenAI, Azure, or Google
+or AWS or others, that's maybe eight cents to keep someone busy for an hour. I have not made a lot of
+assumptions in this calculation, but this seems
+decently inexpensive. In the United States, minimum wage for many places is maybe around 10-15
+dollars an hour, so paying an additional eight
+cents per hour of someone reading intensely seems like
+a small incremental cost, especially if it helps
+them be more productive. Of course, if you
+have a free product that a million users are using, then eight cents
+times a million with no associated revenue
+can get expensive. But I find that for
+many applications, using an LLM turns out to be cheaper than
+most people think. I hope this gives some useful intuition
+for the cost of LLMs. Let's go on to the next video. We'll learn about some more
+advanced technologies they can use to make your
+LLMs even more powerful. I'll see you in the next video.

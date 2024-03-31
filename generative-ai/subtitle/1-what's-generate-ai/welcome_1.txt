@@ -1,0 +1,102 @@
+Welcome to generative
+AI for everyone. Since the release of
+ChatGPT, AI specifically, generative AI has
+caught the attention of many individuals,
+corporations, and governments. It is a very disruptive
+technology that's already changing how many
+people learn and work. Many developers think
+that generative AI will empower many people and
+lead to productivity gains, and also make a
+significant contribution to global economic growth. But there could be
+downsides as well, since it's job loss or worse that some
+people worry about. In this course, you learn
+what generative AI is. What it can and cannot do, and also how to use it in
+your own work or business. Because generative AI is so new, there is still a lot of
+misinformation out there, and so in this course, I hope to convey an accurate
+non-technical understanding of what it really is. It also work of you
+to think through how you can best make
+use of this technology. This course does not assume any technical or
+AI background and is designed to be useful
+to anyone in business, science, engineering,
+the humanities, arts, or other sectors so
+that, let's dive in. Generative AI had caught
+the mainstream attention starting around
+November 2022 when OpenAI released ChatGPT and its momentum has continued unabated according to McKinsey, it could add $2.6 to $4.4 trillion annually
+to the economy. Goldman Sachs estimates
+it could raise global GDP by 7% in
+the next decade, and a study by OpenAI and UPenn estimates that
+it could impact 10% of the work or tasks carried out daily by over 80% of
+workers in the United States. The same study also estimates that there is a 20% of workers whose work or task is more than 50% impacted
+by generative AI, and so studies like these lead to hope for a tremendous
+productivity gain, as well as worries about job
+loss through automation. What is generative AI? This term refers to AI, or artificial
+intelligence systems that can produce
+high-quality content, specifically text,
+images and audio. One of the best-known
+generative AI or GenAI systems is OpenAI's ChatGPT, which can follow instructions to carry out tasks like write three captions for a
+social media posts about our new line of
+sunglasses for robots, and have a generate a
+variety of creative outputs. Many users are familiar
+with websites or direct consumer
+applications that can generate texts like this. Other examples include Bard, which is offered by Google, as well as Bing Chat
+offered by Microsoft. But there are now
+many companies that are offering user
+interfaces that let you type in some texts called a prompt and will
+generate a response. But beyond these
+consumer applications, there's one other application
+of generative AI that I think may turn out to be even more impactful
+in the long term, which is the use of generative
+AI as a developer tool. AI is already pervasive in our lives and many of us use it dozens of times a day or more without even
+thinking about it. Every time you do a web search on Google or Bing, that's AI. Every time you use
+your credit card, there's probably
+an AI checking if it really is you using
+your credit cards or every time you go to a
+website like Amazon or Netflix and it
+recommends products of movies to you, that's AI. But many AI systems have been complex and
+expensive to build, and generative AI is making many AI applications
+much easier to build. This means that the
+number and variety of AI product offerings
+is blossoming because it's becoming
+much cheaper to build certain AI applications
+compared to before. In this course,
+one of the things we'll touch on a few times as well will be how
+generative AI may allow your business to much more inexpensively build very
+valuable AI applications, and you learn best practices
+for identifying and exploring whether or
+not such applications might be useful for
+a given business. I've described generative
+AI as generating text, images and audio, and of these three
+types of contents, the biggest impact so far
+has been on text generation. But it can also generate images
+where given instructions, a different type of prompt. It can generate beautiful
+images like this one, or even a photo-realistic
+image like this. Generative AI can
+also generate audio. For example, here is
+a voice clone of me. Hi, I'm an AI-generated
+voice clone of Andrew. Andrew never actually
+said these words. Isn't that cool? You can
+also put audio together with image or even video generation to create a video
+clone of me like this. Hi, I'm a video clone of Andrew, it's nice to meet you. There's a lot going
+on in generative AI, and this is an exciting
+and disruptive technology that I'm confident you will
+find useful in your work. In this course, during
+the first week, we'll go through how generative
+AI technology actually works and specifically
+what it can and cannot do, and you also see a variety of common use cases that
+I hope will help spark your creativity
+to how you may use it to create value in
+your life on your work. In the second week, we'll discuss
+generative AI projects. Specifically how to identify useful generative
+AI applications, as well as best practices for how to go about
+building them, and we'll take a deeper
+dive into the range of technology options for building a variety of valuable projects. In the final week,
+we will zoom out beyond a single
+project to look at how generative AI will impact businesses as well
+as society at large. We'll look at some
+best practices for how teams where a company
+can take advantage of generative AI and also take a
+look at AI risks and how to make sure that what we do with AI is responsible
+and benefits people. I'm excited to dive into
+this material with you. Until that let's go on to the next video where
+we'll go through a non-technical description of how generative AI technology actually works. I'll see
+you in the next video.

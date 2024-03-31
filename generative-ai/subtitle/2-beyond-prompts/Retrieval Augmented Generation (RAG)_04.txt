@@ -1,0 +1,127 @@
+Well, we've already seen that prompting a large language
+model can take you quite far. But there's a technique called Retrieval Augmented
+Generation or RAG, that can significantly
+expand what you can get an LLM to do by giving it additional knowledge beyond
+what it may have learned from data on the Internet
+or other open sources. Let's take a look.
+If you were to ask a general
+purpose chat system, such as one of the
+ones on the internet, a question like, is there
+parking for employees? It might answer something like, I need more specific information about your workplace because it doesn't know what is the parking
+policy for your company. But RAG or Retrieval Augmented
+Generation will see, is a technique that
+can give the LLM additional information so that if you ask it if
+there's parking, it can refer to policies
+specific to your company. How does it work?
+RAG has three steps. Step 1 is given the question, is there parking for employees? It'll first look
+through a collection of documents that
+may have the answer. For example, if your company
+has different documents on the benefits offered
+to employees and the leave policy and some
+documents on the facilities, and some documents on
+payroll processes, then the first step in
+the rag system would be to have a computer
+find out which, if any, of these documents is most relevant to this question. Parking seems like a question
+about the facilities, about the building
+that your team works in and so hopefully you'll select out the facilities document as most relevant. The second step is
+then to incorporate the retrieved document of the retrieved text into
+an updated prompt. Let me construct a
+prompt as follows. I'm going to say use the following pieces of context answer the
+question at the end, and then I'm going to
+take the relevant text from my facilities
+documentation with the parking policy that all employees may
+park on levels 1 and 2 and so on and put
+that into my prompt. This is now pretty long
+prompt because it tries to give a lot of
+context for the LLM. Now remember last week
+we had spoken about limitations to the prompt length or the input length for
+a large language model. That's why in practice, rather than dumping an entire very long
+document into the prompt, you might pull out just the
+part of the document that's most relevant to
+the question and put just that into the prompt. Then finally, we add
+the original question, is your parking for employees? This is called Retrieval
+Augmented Generation or RAG, because we're going to
+generate an answer to this, but we're going to
+augment how we generate text by retrieving the
+relevant context or the relevant information and augmenting the prompt with
+that additional text. Having constructed this prompt, the final step is to then prompt the LLM with
+this rich prompt. Hopefully the LLM
+will then give us a thoughtful answer telling
+us about where we can park. In some applications using RAG in the output
+shown to the user, we would also add a link to the original source document that led to this answer
+being generated. In this case, we might link to that facilities documentation
+so the user can, if they wish, go back and read the original source document and double check the
+answer for themselves. RAG Retrieval
+Augmented Generation is an important technique
+that is enabling many LLMs to have context
+or to have information beyond what it may have
+learned on the open Internet. Here are some examples of
+RAG based applications. There are many companies today, they are offering
+software that let you chat with a PDF file. For example, if you're
+reading a white paper but you maybe don't have time to read the entire
+thing carefully, but have a question
+that you want answered based on
+that white paper. There are many applications
+today like PandaChat, AskYourPDF, ChatPDF, and many others that let you upload your PDF file
+and then ask questions. And they'll use RAG to try
+to generate answers for you. I find that some of
+these software packages work better and some work worse. So the results you get may vary. But there's certainly been a lot of excitement and interest about building applications to let you chat with your PDF files. There are also more and
+more RAG applications that will answer questions based
+on a website articles. For example, Coursera Coach
+does multiple things, but one of the things it
+does is use RAG to try to answer questions based on content on the
+Coursera site itself. SnapChat also has a chat
+bot that uses texts from Snap to try to answer different questions you might
+have about their products. Hubspot, which is a marketing
+automation company, is another example
+of a company that has a chat bot that
+lets you pose questions and tries to generate
+answers for you based on content from the company
+or from the website itself. So these types of
+chats are becoming an alternative way to let users get answers to
+questions that they may have about your
+company's offerings. RAG is also leading to
+new forms of web search. Microsoft Bing has
+a chat capability. Google has a
+generative AI feature as well that can generate
+text in response to your queries and
+startup.com which was actually started by one
+of my former PhD students, Richard Socher is a web
+search engine that was built centered on a
+chat like interface. RAG is used in many
+applications today, and excitingly, it seems to be transforming even web search. To wrap up this video, there's one big idea I'd
+like to share of you, which is to think of the LLM, not as a knowledge store, but instead as a
+reasoning engine. LLMs may have read a lot
+of texts on the Internet, and so it's tempting
+to think of them as knowing a lot of
+things and they do, but they don't know everything. With the rag approach, we provide relevant context in the prompt itself and we ask the LLM to read that
+piece of text and then to process it to
+get to the answer. In other words, rather than
+counting on it to have memorized enough facts
+to get us the answer, we're instead using it
+as a reasoning engine to process information and not
+as a source of information. Find that this way of
+thinking about LLM's as a reasoning engine
+rather than as a way to store and
+retrieve information, can expand the set
+of applications that we might brainstorm and consider an LLM to
+be capable of doing. Admittedly, LLM technology is early and it doesn't
+always do that well. But if an LLM isn't just a database that stores a
+lot of information for you, but it can process and
+reason through information. I think that is an
+exciting direction to think about where
+LLMs might go from here. Even though I've talked
+mostly about RAG in the context of building
+software applications, this idea can also be useful if you're using a
+web user interface. Sometimes I would take a
+piece of text and just copy it into the prompt
+of an online web UI of an LLM and then tell it to
+use that context to generate an answer for me and that too can be an
+application of RAG. I've found that RAG is useful for many
+different applications, and I hope that you will too. In the next video,
+we'll talk about another technique
+called fine tuning, which is another way to
+expand what an LLM can do. But before I wrap
+up, let me just say, I hope you enjoyed this
+video on RAG and that you can really clean up
+with this RAG stuff. I'll see you in the next video.
