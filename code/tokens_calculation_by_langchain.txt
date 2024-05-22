@@ -1,0 +1,43 @@
+from langchain.llms import OpenAI
+from langchain.chains import  LLMChain
+from langchain.prompts import PromptTemplate
+
+# Your OpenAI API key
+openai.api_key = "YOUR_API_KEY"
+
+# Load JSON data from a file
+with open("your_json_file.json", "r") as f:
+    json_data = json.load(f)
+
+# Create an LLM instance
+llm = OpenAI(model_name="gpt-3.5-turbo")
+
+# Define a prompt template
+prompt_template = PromptTemplate(
+    input_variables=["json_data"],
+    template="Please tell me how many tokens are used when I input this json data: {json_data}"
+)
+
+# Create an LLMChain
+chain = LLMChain(llm=llm, prompt=prompt_template)
+
+# Run the chain with formatted and unformatted JSON
+formatted_json = json.dumps(json_data, indent=4)
+unformatted_json = json.dumps(json_data)
+
+formatted_response = chain.run(json_data=formatted_json)
+unformatted_response = chain.run(json_data=unformatted_json)
+
+# Extract the token counts from the response (assuming the LLM returns a string with the count)
+try:
+    formatted_tokens = int(formatted_response.split(" ")[0])
+    unformatted_tokens = int(unformatted_response.split(" ")[0])
+except ValueError:
+    print("Error: Could not extract token count from the LLM response.")
+    formatted_tokens = None
+    unformatted_tokens = None
+
+# Print results
+print(f"Formatted JSON tokens: {formatted_tokens}")
+print(f"Unformatted JSON tokens: {unformatted_tokens}")
+```
