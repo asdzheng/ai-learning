@@ -22,12 +22,11 @@ private class FillRemainingWidthModifier : LayoutModifier {
     ): MeasureResult {
         val placeable = measurable.measure(
             // We are setting maxWidth to the incoming maxWidth, but allowing minWidth to be 0
-            // This allows the content to be smaller if it wants, but it can expand to maxWidth
+            // This allows the content to be smaller if it wants, but it can expand to maxWidth if space is available
             constraints.copy(minWidth = 0, maxWidth = constraints.maxWidth)
         )
-        // Now, we use constraints.maxWidth as the layout width, effectively filling the available width
-        val layoutWidth = constraints.maxWidth
-        return layout(layoutWidth, placeable.height) { // Use maxWidth for width, placeable.height for actual content height
+        // Now, we use placeable.width and placeable.height, letting the content determine its size within the constraints
+        return layout(placeable.width, placeable.height) {
             placeable.placeRelative(0, 0)
         }
     }
@@ -40,12 +39,11 @@ private class FillRemainingHeightModifier : LayoutModifier {
     ): MeasureResult {
         val placeable = measurable.measure(
             // We are setting maxHeight to the incoming maxHeight, but allowing minHeight to be 0
-            // This allows the content to be smaller if it wants, but it can expand to maxHeight
+            // This allows the content to be smaller if it wants, but it can expand to maxHeight if space is available
             constraints.copy(minHeight = 0, maxHeight = constraints.maxHeight)
         )
-        // Now, we use constraints.maxHeight as the layout height, effectively filling the available height
-        val layoutHeight = constraints.maxHeight
-        return layout(placeable.width, layoutHeight) { // Use placeable.width for actual content width, maxHeight for height
+        // Now, we use placeable.width and placeable.height, letting the content determine its size within the constraints
+        return layout(placeable.width, placeable.height) {
             placeable.placeRelative(0, 0)
         }
     }
@@ -59,13 +57,11 @@ private class FillRemainingSizeModifier : LayoutModifier {
         val placeable = measurable.measure(
             // We are setting maxWidth and maxHeight to the incoming maxWidth and maxHeight,
             // but allowing minWidth and minHeight to be 0.
-            // This allows the content to be smaller if it wants, but it can expand to maxWidth/maxHeight
+            // This allows the content to be smaller if it wants, but it can expand to maxWidth/maxHeight if space is available
             constraints.copy(minWidth = 0, maxWidth = constraints.maxWidth, minHeight = 0, maxHeight = constraints.maxHeight)
         )
-        // Now, we use constraints.maxWidth and constraints.maxHeight as the layout size, effectively filling the available space
-        val layoutWidth = constraints.maxWidth
-        val layoutHeight = constraints.maxHeight
-        return layout(layoutWidth, layoutHeight) { // Use maxWidth and maxHeight for layout size
+        // Now, we use placeable.width and placeable.height, letting the content determine its size within the constraints
+        return layout(placeable.width, placeable.height) {
             placeable.placeRelative(0, 0)
         }
     }
