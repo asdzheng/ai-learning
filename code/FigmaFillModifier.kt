@@ -22,11 +22,12 @@ private class FillRemainingWidthModifier : LayoutModifier {
     ): MeasureResult {
         val placeable = measurable.measure(
             // We are setting maxWidth to the incoming maxWidth, but allowing minWidth to be 0
-            // This means the composable will try to take up as much width as possible within the parent's constraints,
-            // similar to Figma's "Fill Width" - it takes remaining space but doesn't force parent to expand.
+            // This allows the content to be smaller if it wants, but it can expand to maxWidth
             constraints.copy(minWidth = 0, maxWidth = constraints.maxWidth)
         )
-        return layout(placeable.width, placeable.height) {
+        // Now, we use constraints.maxWidth as the layout width, effectively filling the available width
+        val layoutWidth = constraints.maxWidth
+        return layout(layoutWidth, placeable.height) { // Use maxWidth for width, placeable.height for actual content height
             placeable.placeRelative(0, 0)
         }
     }
@@ -39,11 +40,12 @@ private class FillRemainingHeightModifier : LayoutModifier {
     ): MeasureResult {
         val placeable = measurable.measure(
             // We are setting maxHeight to the incoming maxHeight, but allowing minHeight to be 0
-            // This means the composable will try to take up as much height as possible within the parent's constraints,
-            // similar to Figma's "Fill Height" - it takes remaining space but doesn't force parent to expand.
+            // This allows the content to be smaller if it wants, but it can expand to maxHeight
             constraints.copy(minHeight = 0, maxHeight = constraints.maxHeight)
         )
-        return layout(placeable.width, placeable.height) {
+        // Now, we use constraints.maxHeight as the layout height, effectively filling the available height
+        val layoutHeight = constraints.maxHeight
+        return layout(placeable.width, layoutHeight) { // Use placeable.width for actual content width, maxHeight for height
             placeable.placeRelative(0, 0)
         }
     }
@@ -57,11 +59,13 @@ private class FillRemainingSizeModifier : LayoutModifier {
         val placeable = measurable.measure(
             // We are setting maxWidth and maxHeight to the incoming maxWidth and maxHeight,
             // but allowing minWidth and minHeight to be 0.
-            // This makes the composable fill both width and height within the parent's constraints,
-            // similar to Figma's "Fill" for both directions.
+            // This allows the content to be smaller if it wants, but it can expand to maxWidth/maxHeight
             constraints.copy(minWidth = 0, maxWidth = constraints.maxWidth, minHeight = 0, maxHeight = constraints.maxHeight)
         )
-        return layout(placeable.width, placeable.height) {
+        // Now, we use constraints.maxWidth and constraints.maxHeight as the layout size, effectively filling the available space
+        val layoutWidth = constraints.maxWidth
+        val layoutHeight = constraints.maxHeight
+        return layout(layoutWidth, layoutHeight) { // Use maxWidth and maxHeight for layout size
             placeable.placeRelative(0, 0)
         }
     }
