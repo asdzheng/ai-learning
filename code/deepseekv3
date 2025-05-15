@@ -1,0 +1,106 @@
+import requests
+import json
+import os
+from typing import Optional, Dict, Any
+
+class GitHubCopilotClient:
+    def __init__(self, github_token: str, api_base: str = "https://api.githubcopilot.com"):
+        """
+        初始化GitHub Copilot客户端
+        
+        :param github_token: GitHub个人访问令牌
+        :param api_base: Copilot API基础URL(默认为官方API地址)
+        """
+        self.api_base = api_base
+        self.headers = {
+            "Authorization": f"Bearer {github_token}",
+            "Content-Type": "application/json",
+            "User-Agent": "GitHub-Copilot-Python-Client/1.0",
+            "Accept": "application/json"
+        }
+    
+    def generate_completion(
+        self,
+        prompt: str,
+        model: str = "gpt-4.1",
+        max_tokens: int = 1000,
+        temperature: float = 0.7,
+        top_p: float = 1.0,
+        n: int = 1,
+        stop: Optional[str] = None,
+        stream: bool = False
+    ) -> Dict[str, Any]:
+        """
+        生成代码补全或回答
+        
+        :param prompt: 输入的提示文本
+        :param model: 使用的模型(默认为gpt-4.1)
+        :param max_tokens: 生成的最大token数
+        :param temperature: 温度参数(控制随机性)
+        :param top_p: 核采样参数
+        :param n: 返回的候选数
+        :param stop: 停止序列
+        :param stream: 是否流式返回
+        :return: API响应结果
+        """
+        url = f"{self.api_base}/v1/completions"
+        payload = {
+            "prompt": prompt,
+            "model": model,
+            "max_tokens": max_tokens,
+            "temperature": temperature,
+            "top_p": top_p,
+            "n": n,
+            "stream": stream
+        }
+        
+        if stop:
+            payload["stop"] = stop
+        
+        try:
+            response = requests.post(url, headers=self.headers, json=payload)
+            response.raise_for_status()
+            return response.json()
+        except requests.exceptions.RequestException as e:
+            print(f"API请求失败: {e}")
+            if hasattr(e, 'response') and e.response:
+                print(f"响应内容: {e.response.text}")
+            raise
+
+def main():
+    # 从环境变量获取GitHub Token(更安全的方式)
+    github_token = os.getenv("GITHUB_TOKEN")
+    if not github_token:
+        print("请设置GITHUB_TOKEN环境变量")
+        return
+    
+    # 初始化客户端
+    copilot = GitHubCopilotClient(github_token)
+    
+    # 示例使用
+    while True:
+        user_input = input("\n请输入你的问题(输入'quit'退出): ")
+        if user_input.lower() == 'quit':
+            break
+        
+        try:
+            response = copilot.generate_completion(
+                prompt=user_input,
+                model="gpt-4.1",
+                max_tokens=500
+            )
+            
+            # 提取并显示回答
+            if "choices" in response and len(response["choices"]) > 0:
+                answer = response["choices"][0]["text"]
+                print("\n回答:")
+                print(answer)
+            else:
+                print("未收到有效回答")
+                print("完整响应:", json.dumps(response, indent=2))
+                
+        except Exception as e:
+            print(f"发生错误: {e}")
+
+if __name__ == "__main__":
+    main()
