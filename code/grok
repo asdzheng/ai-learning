@@ -1,0 +1,66 @@
+import requests
+import json
+
+# Configuration
+GITHUB_TOKEN = "your_github_personal_access_token"  # Replace with your GitHub token
+API_ENDPOINT = "https://api.github.com/copilot/gpt-4.1"  # Hypothetical endpoint
+HEADERS = {
+    "Authorization": f"Bearer {GITHUB_TOKEN}",
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+def ask_copilot(question: str) -> str:
+    """
+    Send a question to the hypothetical GitHub Copilot GPT-4.1 API and return the response.
+    
+    Args:
+        question (str): The question or prompt to send to the model.
+    
+    Returns:
+        str: The model's response or an error message.
+    """
+    # Prepare the payload (inspired by CopilotService.ts structure)
+    payload = {
+        "prompt": question,
+        "model": "gpt-4.1",  # Specify the model
+        "max_tokens": 500,    # Limit response length
+        "temperature": 0.7,   # Control response creativity
+    }
+
+    try:
+        # Make the API request
+        response = requests.post(API_ENDPOINT, headers=HEADERS, json=payload)
+        
+        # Check for successful response
+        response.raise_for_status()
+        
+        # Parse the response
+        data = response.json()
+        
+        # Extract the answer (adjust based on actual API response structure)
+        if "choices" in data and len(data["choices"]) > 0:
+            return data["choices"][0]["text"].strip()
+        else:
+            return "Error: No valid response from the API."
+    
+    except requests.exceptions.HTTPError as http_err:
+        return f"HTTP error occurred: {http_err}"
+    except requests.exceptions.RequestException as err:
+        return f"Error connecting to the API: {err}"
+    except (KeyError, ValueError) as parse_err:
+        return f"Error parsing response: {parse_err}"
+
+def main():
+    # Example question
+    question = "What is the capital of France?"
+    
+    # Call the Copilot API
+    answer = ask_copilot(question)
+    
+    # Print the result
+    print(f"Question: {question}")
+    print(f"Answer: {answer}")
+
+if __name__ == "__main__":
+    main()
